@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="База данных студентов Skillbox с фильтьрцацией и сортировкой.">
+  <link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/png">
+  <title>База студентов Skillbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer type="module" src="./create-table-students.js" ></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">
+      Панель управления
+    </h1>
+    <p class="description">
+      студентов Skillbox
+    </p>
+    <button class="add">Добавить студента</button>
+    <div class="table-students">
+      <form class="table-students__filters white-phone">
+        <fieldset class="table-students__fielset">
+          <legend class="table-students__title">Заполните поля для фильтрации</legend>
+        </fieldset>
+      </form>
+      <div class="students-container">
+        <ul class="table-students__list students white-phone">
+          <li class="students__main-title">
+            Данные о студентах
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="popup-add hidden">
+      <form class="popup-add__form" action="#">
+        <p class="popup-add__title">
+          Введите данные о студенте
+        </p>
+        <label for="surname" class="popup-add__label">
+          <input id="surname" class="popup-add__input" type="text" name="surname" placeholder="Фамилия" required>
+        </label>
+        <label for="name" class="popup-add__label">
+          <input id="name" class="popup-add__input" type="text" name="name" placeholder="Имя" required>
+        </label>
+        <label for="patronymic" class="popup-add__label">
+          <input id="patronymic" class="popup-add__input" type="text" name="patronymic" placeholder="Отчество" required>
+        </label>
+        <label for="course" class="popup-add__label">
+          <input id="course" class="popup-add__input" type="text" name="faculty"placeholder="Курс" required>
+        </label>
+        <label for="birth" class="popup-add__label">
+          Дата рождения
+          <input id="birth" class="popup-add__data" type="date" name="birth"  min="1900-01-01" required>
+        </label>
+        <label for="study" class="popup-add__label">
+          Год начала обучения
+          <input id="study" class="popup-add__data" type="number" name="study"  min="2000" required>
+        </label>
+        <div class="popup-add__container-btn">
+          <button class="popup-add__btn" type="submit">
+            Добавить
+          </button>
+        </div>
+      </form>
+      <div class="popup-add__success hidden">
+        <p class="popup-add__text">
+          Данные успешно добавлены
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
