@@ -442,7 +442,7 @@ p {
       grid-template-columns: repeat(100, max-content);
       max-height: unset;
       padding-top: 51px;
-      padding-left: 122px;
+      padding-left: 139px;
   }
 
   .students__main-title {
@@ -450,7 +450,7 @@ p {
     top: 14px;
     left: 0;
     max-width: 100%;
-    padding: 20px 20px 5px;
+    padding: 20px 20px 9px;
     font-size: 17px;
     border-top-left-radius: 5px;
   }
